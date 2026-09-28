@@ -1,0 +1,161 @@
+/* Reset & Base */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Wrapper Layout */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  background-color: #f5f7fa;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Sidebar */
+#sidebarMenu {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: #1e2a38;
+  color: #fff;
+  border-right: none;
+  overflow-y: auto;
+}
+
+#sidebarMenu .nav-link {
+  color: #cfd8dc;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+}
+
+#sidebarMenu .nav-link:hover,
+#sidebarMenu .nav-link.active {
+  background-color: #34495e;
+  color: #ffd700 !important;
+}
+
+#sidebarMenu h6,
+#sidebarMenu small {
+  color: #ffffff;
+}
+
+.sidebar-avatar {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border: 2px solid #ffd700;
+}
+
+/* Top Navbar (mobile) */
+.navbar-light.bg-light {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Course Cards */
+.course-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table.dataTable {
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 4px 8px;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 1rem;
+}
+
+/* Cards (Dashboard Info Boxes) */
+.card {
+  border-radius: 10px !important;
+  border: none;
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.card.text-white.bg-primary {
+  background: #1e88e5;
+}
+
+.card.text-white.bg-success {
+  background: #43a047;
+}
+
+.card.text-white.bg-info {
+  background: #00acc1;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background-color: #1e88e5;
+  border-color: #1e88e5;
+}
+
+.btn-primary:hover {
+  background-color: #1669bb;
+  border-color: #1669bb;
+}
+
+.btn-outline-primary {
+  border-color: #1e88e5;
+  color: #1e88e5;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1e88e5;
+  color: #fff;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 767.98px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  #sidebarMenu {
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}

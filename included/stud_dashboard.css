@@ -1,0 +1,329 @@
+/* -------------------------
+   UNIVERSAL STYLES
+-------------------------- */
+* {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  animation: fadeIn 1s ease-in;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------
+   SIDEBAR (DESKTOP)
+-------------------------- */
+.sidebar {
+  width: 300px;
+  background: #fff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar .brand {
+  text-align: center;
+  padding: 25px 0;
+}
+
+.sidebar .brand img {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  margin: 15px 10px;
+  transition: 0.2s;
+}
+
+.sidebar ul li a i {
+  color: #daa520;
+  width: 25px;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(231, 176, 35, 0.15);
+  color: #000;
+}
+
+.sidebar ul li a:hover i {
+  color: goldenrod;
+}
+
+.sidebar ul li a.active {
+  background: goldenrod;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.sidebar ul li a.active i {
+  color: rgb(0, 0, 0);
+}
+
+/* -------------------------
+   USER SECTION
+-------------------------- */
+.user-section {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.user-section img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #daa520;
+  object-fit: cover;
+}
+
+.user-links {
+  background: #fff;
+  padding: 10px 0;
+}
+
+.user-links a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+
+.user-links a:hover {
+  background: rgba(231, 176, 35, 0.15);
+}
+
+.user-links .logout {
+  height: 50px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.user-links .logout:hover {
+  background: rgba(231, 176, 35, 0.15);
+}
+
+/* -------------------------
+   MAIN CONTENT
+-------------------------- */
+main {
+  margin-left: 300px;
+  padding: 30px;
+  width: calc(100% - 300px);
+}
+
+/* -------------------------
+   MOBILE NAVBAR
+-------------------------- */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  height: 80px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.mobile-nav img {
+  height: 45px;
+  display: block;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+}
+
+.navbar-toggler i {
+  font-size: 28px;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.navbar-toggler:hover i {
+  color: goldenrod;
+}
+
+/* -------------------------
+   MOBILE MENU
+-------------------------- */
+.offcanvas a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 0;
+  transition: 0.2s;
+}
+
+.offcanvas a:hover {
+  color: #000;
+  background: rgba(218,165,32,0.15);
+  border-radius: 5px;
+}
+
+.offcanvas i {
+  color: inherit;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+
+.offcanvas a:hover i {
+  color: goldenrod;
+}
+
+/* -------------------------
+   STUDENT DASHBOARD
+-------------------------- */
+.studash-dashboard-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.studash-title {
+  font-size: 1.8rem;
+  color: #333;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* --- Overview Section --- */
+.studash-overview-section .studash-overview-card {
+  border: none;
+  background: linear-gradient(145deg, #fff, #f9f9f9);
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.studash-overview-section .studash-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* --- Section Titles --- */
+.studash-section-title {
+  font-size: 1.4rem;
+  padding-left: 10px;
+  color: #333;
+}
+
+/* --- Course Cards --- */
+.studash-course-card {
+  border: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.studash-course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.studash-course-card h5 {
+  color: #333;
+}
+
+.studash-course-card p {
+  flex-grow: 1;
+  color: #666;
+}
+
+.studash-course-card a.btn {
+  border: 2px solid #333;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.studash-course-card a.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* --- Certifications --- */
+.studash-certifications-section .studash-certification-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.studash-certifications-section .studash-certification-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* -------------------------
+   RESPONSIVE DESIGN
+-------------------------- */
+@media (max-width: 991px) {
+  .sidebar { display: none; }
+  .mobile-nav { display: flex; }
+  main { 
+    margin-left: 0; 
+    padding-top: 90px; 
+    width: 100%; 
+  }
+
+  .studash-dashboard-card {
+    padding: 20px;
+  }
+
+  .studash-title {
+    font-size: 1.5rem;
+  }
+
+  .studash-overview-section .studash-overview-card {
+    padding: 20px 10px;
+  }
+
+  .studash-course-card {
+    padding: 20px;
+  }
+}
